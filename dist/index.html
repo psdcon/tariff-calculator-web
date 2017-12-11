@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/react-select-plus/dist/react-select-plus.min.css">
+  <!--<link rel="stylesheet" href="../doesnt_work/style.css">-->
+</head>
+
+<body>
+  <div id="errors"></div>
+  <div id="react-container"></div>
+
+  <script>
+  window.onerror = function(message, source, line, col, error) {
+    var text = error ? error.stack || error : message + ' (at ' + source + ':' + line + ':' + col + ')';
+    errors.textContent += text + '\n';
+    errors.style.display = '';
+  };
+  console.error = (function(old) {
+    return function error() {
+      errors.textContent += Array.prototype.slice.call(arguments).join(' ') + '\n';
+      errors.style.display = '';
+      old.apply(this, arguments);
+    }
+  })(console.error);
+  </script>
+
+  <script src="tariff_skills.js"></script>
+  <script src="tariff_chunk.js"></script>
+
+</body>

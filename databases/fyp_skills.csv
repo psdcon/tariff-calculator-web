@@ -1,0 +1,88 @@
+id,name,comp,code,level,fig_notation,tariff,shape_bonus,start_position,end_position
+0,Straight Bounce,0,f0f,,,0.0,,,
+1,Tuck Jump,1,ftf,Shape,o,0.0,0.0,Feet,Feet
+2,Pike Jump,1,fpf,Shape,<,0.0,0.0,Feet,Feet
+3,Straddle Jump,1,fsf,Shape,0 -,0.0,0.0,Feet,Feet
+4,Half Twist Jump,1,f1f,Twist,0 1,0.1,0.0,Feet,Feet
+5,Full Twist Jump,1,f2f,Twist,0 2,0.2,0.0,Feet,Feet
+6,Seat Drop,1,f0s,Seat,0 -,0.0,0.0,Feet,Seat
+7,Half Twist to Seat Drop,1,f1s,Seat,0 1,0.1,0.0,Feet,Seat
+8,Seat Half Twist To Seat,1,s1s,Seat,0 1,0.1,0.0,Seat,Seat
+9,To Feet from Seat,1,s0f,Seat,0 -,0.0,0.0,Seat,Feet
+10,Half Twist to Feet from Seat,1,s1f,Seat,0 1,0.1,0.0,Seat,Seat
+11,Full Twist to Feet from Seat,1,s2f,Seat,0 2,0.2,0.0,Seat,Seat
+12,Roller,0,,Seat,0 2,0.2,0.0,Seat,Seat
+13,Front Drop,1,f0r,Front,1 -,0.1,0.0,Feet,Front
+14,Half Twist to Front Drop,1,f1r,Front,1 1,0.2,0.0,Feet,Front
+15,Full Twist to Front Drop,0,,Front,2 1,0.2,0.0,Feet,Front
+16,To Feet from Front,1,r0f,Front,1 -,0.1,0.0,Front,Feet
+17,Half Twist to Feet from Front,1,r1f,Front,1 1,0.2,0.0,Front,Feet
+18,Full Twist to Feet from Front,0,r2f,Front,1 2,0.3,0.0,Front,Feet
+19,Log Roll,0,,Front,0 2,0.2,0.0,Front,Front
+20,Tom Cruise,0,,Front,2 1 /,0.3,0.0,Front,Front
+21,Turntable,0,,Front,,0.0,0.0,Front,Front
+22,Back Drop,1,f0b,Back,1 -,0.1,0.0,Feet,Back
+23,Half Twist to Back Drop,1,f1b,Back,1 1,0.2,0.0,Feet,Back
+24,Full Twist to Back Drop,1,f2b,Back,2 1,0.2,0.0,Feet,Back
+25,To Feet from Back,1,b0f,Back,1 -,0.1,0.0,Back,Feet
+26,Half Twist to Feet from Back,1,b1f,Back,1 1,0.2,0.0,Back,Feet
+27,Full Twist to Feet from Back,1,b2f,Back,1 2,0.3,0.0,Back,Feet
+28,Cat Twist,0,,Back,0 2,0.2,0.0,Back,Back
+29,Cradle,0,,Back,2 1,0.3,0.0,Back,Back
+30,Corkscrew,0,,Back,2 3,0.5,0.0,Back,Back
+31,Toilet Bowl,0,,Back,,0.0,0.0,Back,Back
+32,Turnover/Bounce Roll,0,,Front Somersault,4 - o,0.5,0.0,Back,Back
+33,Front Somersault,1,fss,Front Somersault,4 - o,0.5,0.1,Feet,Feet
+34,Barani,1,bri,Front Somersault,4 1 o,0.6,0.0,Feet,Feet
+35,Crash Dive,1,cdi,Front Somersault,3 - o,0.3,0.0,Feet,Back
+36,Half Twist to Crash Dive,1,,Front Somersault,3 1,0.4,0.0,Feet,Back
+37,1 and 3 Front Somersault,1,,Front Somersault,7 - o,0.8,0.2,Feet,Back
+38,Back Pullover to Feet,0,,Back Somersault,3 -,0.3,0.0,Back,Feet
+39,Back Somersault,1,bss,Back Somersault,4 - o,0.5,0.1,Feet,Feet
+40,Back Somersault to Seat,1,bst,Back Somersault,4 - o,0.5,0.1,Feet,Seat
+41,Lazy Back,1,lbk,Back Somersault,3 - o,0.3,0.0,Feet,Front
+42,Cody,1,cdy,Back Somersault,5 - o,0.6,0.1,Front,Front
+43,Ball Out,1,bot,Ball Outs,5 - o,0.6,0.0,Back,Back
+44,Barani Ball Out,1,bbo,Ball Outs,5 1 o,0.7,0.0,Back,Feet
+45,Baby Fliffus,1,,Ball Outs,5 1 -,0.7,0.0,Back,Feet
+46,Rudy Ball Out,1,,Ball Outs,5 3 /,0.9,0.0,Back,Feet
+47,Randy Ball Out,1,,Ball Outs,5 5 /,1.1,0.0,Back,Feet
+48,Adolf Ball Out,1,,Ball Outs,5 7 /,1.3,0.0,Back,Feet
+49,Half Out Ball Out,1,,Ball Outs,9 - 1 o,1.2,0.2,Back,Feet
+50,Rudolph / Rudi,1,rui,Twisting Single Somersault,4 3 /,0.8,0.0,Feet,Feet
+51,Randolph / Randy,1,,Twisting Single Somersault,4 5 /,1.0,0.0,Feet,Feet
+52,Adolph/Ady,1,,Twisting Single Somersault,4 7 /,1.2,0.0,Feet,Feet
+53,Periwinkle,0,,Twisting Single Somersault,7 2 - o,1.0,0.2,Feet,Feet
+54,Full Back,1,fub,Twisting Single Somersault,4 2 /,0.7,0.0,Feet,Feet
+55,Double Full,1,,Twisting Single Somersault,4 4 /,0.9,0.0,Feet,Feet
+56,Double Front,1,,Double Front Somersaults,8 - - o,1.0,0.2,Feet,Feet
+57,Double Bounce-Roll,1,,Double Front Somersaults,8 - - o,1.0,0.2,Back,Back
+58,Half Out,1,,Double Front Somersaults,8 - 1 o,1.1,0.2,Feet,Feet
+59,Rudi Out,1,,Double Front Somersaults,8 - 3 o,1.3,0.2,Feet,Feet
+60,Randy Out,1,,Double Front Somersaults,8 - 5 o,1.5,0.2,Feet,Feet
+61,Half In - Back Out,1,,Double Front Somersaults,8 1 - o,1.1,0.2,Feet,Feet
+62,Full In - Half Out,1,,Double Front Somersaults,8 2 1 o,1.3,0.2,Feet,Feet
+63,Full In - Rudi Out,1,,Double Front Somersaults,8 2 3 o,1.5,0.2,Feet,Feet
+64,Full In - Double Full Out,1,,Double Front Somersaults,8 2 4 o,1.6,0.2,Feet,Feet
+65,2 and three quarter Front Somersault,1,,Double Front Somersaults,11 - - - o,1.3,0.2,Feet,Back
+66,Double Back,1,,Double Back Somersaults,8 - - o,1.0,0.2,Feet,Feet
+67,Miller,1,,Double Back Somersaults,8 2 1 o,1.6,0.2,Feet,Feet
+68,Poliarush/Miller Plus,1,,Double Back Somersaults,8 4 4 o,1.8,0.2,Feet,Feet
+69,Half In - Half Out,1,,Double Back Somersaults,8 1 1 o,1.2,0.2,Feet,Feet
+70,Half In - Rudi Out,1,,Double Back Somersaults,8 1 3 o,1.4,0.2,Feet,Feet
+71,Half In - Randy Out,1,,Double Back Somersaults,8 1 5 o,1.6,0.2,Feet,Feet
+72,Full In - Back Out,1,,Double Back Somersaults,8 2 - o,1.2,0.2,Feet,Feet
+73,Back In - Full Out,1,,Double Back Somersaults,8 - 2 o,1.2,0.2,Feet,Feet
+74,Full In - Full Out,1,,Double Back Somersaults,8 2 2 o,1.4,0.2,Feet,Feet
+75,Full Out,1,,Double Back Somersaults,8 - 2 o,1.2,0.2,Feet,Feet
+76,Triffus,1,,Tripples +,12 - - 1 <,1.8,0.0,Feet,Feet
+77,Half Out Triffus,1,,Tripples +,12 - - 1 o,1.7,0.3,Feet,Feet
+78,Rudi Out Triffus,1,,Tripples +,12 - - 3 o,1.8,0.2,Feet,Feet
+79,Half In Half Out Triffus,1,,Tripples +,12 1 - 1 o,1.8,0.3,Feet,Feet
+80,Half In Rudi Out Triffus,1,,Tripples +,12 1 - 3 o,2.0,0.3,Feet,Feet
+81,Half Out Quad,1,,Tripples +,16 - - - 1 o,2.3,0.4,Feet,Feet
+82,Porpoise / Dolphin,0,,Front Somersault,,0.0,0.0,Seat,Seat
+83,Back Somersault to back,0,,Back Somersault,5 - /,0.6,0.1,Feet,Back
+85,Full Front,1,ffr,Twisting Single Somersault,4 2 /,0.7,0.0,Feet,Feet
+86,Back Half,1,bha,Twisting Single Somersault,4 1 /,0.6,0.0,Feet,Feet
+87,Landing,0,lan,,,0.0,,,

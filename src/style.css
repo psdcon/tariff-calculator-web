@@ -1,0 +1,206 @@
+
+/* Bootstrap Styles */
+.btn-bs4 {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .5em 1em;
+    /*font-size: 1em;*/
+    border-radius: .25em;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    /*margin: 0;*/
+    /*Seconday*/
+    color: #292b2c;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.btn-bs4:disabled {
+    cursor: not-allowed;
+    opacity: .65;
+}
+.form-control-bs4 {
+    display: block;
+    width: 100%;
+    padding: .5em .75em;
+    /*font-size: 1em;*/
+    line-height: 1.25;
+    color: #464a4c;
+    background-color: #fff;
+    background-image: none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25em;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    /*margin: 0;*/
+}
+/* End Bootstrap */
+
+/**/
+/**/
+
+/* Calculator*/
+.calculator {
+    /*padding: 1em;*/
+    /*font-size: 16px;*/
+}
+
+.calculator__main {
+    max-width: 100%;
+    width: 600px;
+    margin-bottom: 8px;
+}
+
+.score {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Calculator row */
+.calculator-row {
+    display: inline-flex;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.index {
+    width: 3em;
+    padding-right: 0.5em;
+    padding-top: 0.4em;
+    text-align: right;
+}
+
+.fig_notation {
+    /*font-size: 1em;*/
+    line-height: 1.25;
+    color: #464a4c;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25em;
+    background-color: #fff;
+
+    position: relative;
+    display: inline-flex;
+    /*vertical-align: middle;*/
+}
+
+/*.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle)*/
+
+.fig_notation > span:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, .15);
+}
+
+/*.fig_notation > span:nth-child(2) {*/
+/*    min-width: 3em;*/
+/*}*/
+
+.fig_notation > span {
+    padding: .5em .3em;
+    min-width: 1.6em;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Will apply if less than this*/
+@media (min-width: 700px) {
+    .calculator {
+        display: flex;
+    }
+
+    .calculator__errors {
+        flex-grow: 1;
+        margin-left: 1em;
+    }
+}
+
+.calculator-row > * {
+    margin-left: 0.7em;
+}
+
+.errors {
+    border: 1px solid;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    padding: 2px 8px;
+}
+
+.highlight-red,
+.highlight-red .Select-control {
+    border-color: red;
+}
+
+.highlight-red.is-focused .Select-control {
+    border-color: red;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 3px rgba(255, 0, 0, 0.1);
+}
+
+.highlight-orange {
+    border-color: darkorange;
+}
+
+/* Shape Button */
+.shape-btn {
+    width: 3em;
+    padding: 0;
+    text-align: center;
+}
+
+.shape-btn img {
+    width: 1.8em;
+    height: 1.8em;
+}
+
+.shape-btn:disabled img {
+    filter: grayscale(100%);
+}
+
+.tariff-value:disabled {
+    display: inline-block;
+    width: 3em;
+    background-color: #fff;
+    cursor: auto;
+    text-align: right;
+    padding-left: 0;
+}
+
+/* Custom Select styles*/
+.Select {
+    width: 100%;
+}
+
+.Select-option {
+    padding: 0;
+}
+
+.Select-control {
+    height: 100%;
+}
+
+.Select-menu-outer {
+    height: 500px;
+    max-height: calc(100vh - 50px);
+}
+
+.Select-menu {
+    height: 498px;
+    max-height: calc(100vh - 52px);
+}
+
+.Select-option-group-label {
+    border-top: 1px solid lightgray;
+    padding: 0 10px;
+    margin-top: 8px;
+}
