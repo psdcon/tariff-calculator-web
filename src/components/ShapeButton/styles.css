@@ -1,0 +1,15 @@
+/* Shape Button */
+.shape-btn {
+    width: 3em;
+    padding: 0;
+    text-align: center;
+}
+
+.shape-btn img {
+    width: 1.8em;
+    height: 1.8em;
+}
+
+.shape-btn:disabled img {
+    filter: grayscale(100%);
+}

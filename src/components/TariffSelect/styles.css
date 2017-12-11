@@ -1,0 +1,28 @@
+/* Custom Select styles*/
+.Select {
+    width: 100%;
+}
+
+.Select-option {
+    padding: 0;
+}
+
+.Select-control {
+    height: 100%;
+}
+
+.Select-menu-outer {
+    height: 500px;
+    max-height: calc(100vh - 50px);
+}
+
+.Select-menu {
+    height: 498px;
+    max-height: calc(100vh - 52px);
+}
+
+.Select-option-group-label {
+    border-top: 1px solid lightgray;
+    padding: 0 10px;
+    margin-top: 8px;
+}

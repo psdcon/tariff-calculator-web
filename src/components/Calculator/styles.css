@@ -1,0 +1,65 @@
+/* Grid styles */
+/* Calculator*/
+.calculator__score {
+    grid-area: score;
+}
+
+.calculator__rows {
+    grid-area: rows;
+}
+
+.calculator__errors {
+    grid-area: errors;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "score" "errors" "rows";
+}
+
+/* If screen greater than <size>, split into 2 columns*/
+@media (min-width: 700px) {
+    .calculator {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "score ." "rows errors";
+        grid-column-gap: 1em;
+    }
+}
+
+/*End grid styles*/
+
+/* General styles */
+.calculator__rows {
+    /*max-width: 100%;*/
+    /*width: 600px;*/
+    /*margin-bottom: 8px;*/
+}
+
+.calculator__score {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.errors {
+    border: 1px solid;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    padding: 2px 8px;
+}
+
+.highlight-red,
+.highlight-red .Select-control {
+    border-color: red;
+}
+
+.highlight-red.is-focused .Select-control {
+    border-color: red;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 0 3px rgba(255, 0, 0, 0.1);
+}
+
+.highlight-orange {
+    border-color: darkorange;
+}
+
+

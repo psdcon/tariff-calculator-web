@@ -1,0 +1,8 @@
+.tariff-value:disabled {
+    display: inline-block;
+    width: 3em;
+    background-color: #fff;
+    cursor: auto;
+    text-align: right;
+    padding-left: 0;
+}

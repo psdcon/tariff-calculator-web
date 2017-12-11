@@ -1,0 +1,50 @@
+/* Bootstrap Styles */
+.btn-bs4 {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .5em 1em;
+    /*font-size: 1em;*/
+    border-radius: .25em;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    /*margin: 0;*/
+    /*Seconday*/
+    color: #292b2c;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.btn-bs4:disabled {
+    cursor: not-allowed;
+    opacity: .65;
+}
+.form-control-bs4 {
+    display: block;
+    width: 100%;
+    padding: .5em .75em;
+    /*font-size: 1em;*/
+    line-height: 1.25;
+    color: #464a4c;
+    background-color: #fff;
+    background-image: none;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25em;
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    /*margin: 0;*/
+}
+/* End Bootstrap */

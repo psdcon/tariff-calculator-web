@@ -1,0 +1,29 @@
+.fig_notation {
+    /*font-size: 1em;*/
+    line-height: 1.25;
+    color: #464a4c;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25em;
+    background-color: #fff;
+
+    position: relative;
+    display: inline-flex;
+    /*vertical-align: middle;*/
+}
+
+/*.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle)*/
+
+.fig_notation > span:not(:last-child) {
+    border-right: 1px solid rgba(0, 0, 0, .15);
+}
+
+/*.fig_notation > span:nth-child(2) {*/
+/*    min-width: 3em;*/
+/*}*/
+
+.fig_notation > span {
+    padding: .5em .3em;
+    min-width: 1.6em;
+    text-align: center;
+    white-space: nowrap;
+}
