@@ -10,35 +10,46 @@
 
 .calculator__errors {
     grid-area: errors;
+    overflow: hidden;
 }
 
 .calculator {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "score" "errors" "rows";
+    grid-template-areas: "score" "routines-btn-row" "errors" "rows";
 }
 
 /* If screen greater than <size>, split into 2 columns*/
 @media (min-width: 700px) {
     .calculator {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-areas: "score ." "rows errors";
+        grid-template-areas: "score routines-btn-row" "rows errors";
         grid-column-gap: 1em;
     }
 }
-
 /*End grid styles*/
 
 /* General styles */
-.calculator__rows {
-    /*max-width: 100%;*/
-    /*width: 600px;*/
-    /*margin-bottom: 8px;*/
+
+.routines-btn {
+    position: absolute;
+    margin: 4px;
+    top: 0;
 }
 
 .calculator__score {
     font-size: 1.5em;
     text-align: center;
+}
+
+.routines-level__row{
+    /*overflow: hidden;*/
+}
+.routines-level__scroll{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    max-width: 100%;
 }
 
 .errors {

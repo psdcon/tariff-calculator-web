@@ -5,9 +5,13 @@ import './styles.css';
 import './styles_bs4.css';
 
 import {filterSelectOptions} from '../../utils/skill_loader'
-import {skills} from "../../data/tariff_skills";
+// import {routines} from "../../data/tariff_routines";
+// import {skills} from "../../data/tariff_skills";
+import skills from '../../data/databases/new_tariff_skills.json'
+import routines from '../../data/databases/new_routines.json'
 import * as consts from '../../utils/consts'
 import {CalculatorRow} from "../CalculatorRow";
+import {Routine} from "../Routine/index";
 
 export class Calculator extends Component {
     constructor() {
@@ -21,18 +25,9 @@ export class Calculator extends Component {
 
             errors_position: new Array(10).fill(""),
             errors_repeat: new Array(10).fill(""),
-        };
-    }
 
-    componentDidMount() {
-        // let skills = new Array(10).fill(null);
-        // skills[0] = 12;
-        // skills[1] = 1;
-        // skills[2] = 12;
-        // this.setState({
-        //     skills: skills
-        // });
-        // this.handleSkillChange(0, {value: skills[0]});
+            show_routines: false
+        };
     }
 
     setStateAllRows(skillsState, shapesState) {
@@ -56,6 +51,17 @@ export class Calculator extends Component {
             errors_position: errorsPosState,
             errors_repeat: errorsRptState
         });
+    }
+
+    handleRoutineLoad(routineIndex) {
+        console.log(routineIndex);
+        const routine = routines[routineIndex];
+        this.setStateAllRows(routine.skills, routine.shapes)
+    }
+
+    handleRoutinesToggle() {
+        const showRoutines = !this.state.show_routines;
+        this.setState({show_routines: showRoutines})
     }
 
     // onChange handler for react-selects
@@ -126,8 +132,8 @@ export class Calculator extends Component {
     }
 
     render() {
-        let calcRows = [];
         let score = 0;
+        let calcRows = [];
         for (let i = 0; i < consts.num_rows; i++) {
             // Flag to <TariffValue> to show 'Rpt' instead of <this.state.tariffs[i]>
             const tariffValueRpt = Boolean(this.state.errors_repeat[i]);
@@ -158,8 +164,52 @@ export class Calculator extends Component {
             )
         }
 
+        // Render routines if the toggle button has been pressed.
+        let routines_html = [];
+        if (this.state.show_routines) {
+            let routinesByLevel = {'Novice': [], 'Intermediate': [], 'Intervanced': [], 'Advanced': [], 'Elite': []};
+            for (let i = 0; i < routines.length; i++) {
+                const routine = routines[i];
+                routinesByLevel[routine.level].push(<Routine
+                    key={i}
+                    routine={routine}
+                    onRoutineClick={() => this.handleRoutineLoad(i)}
+                />)
+            }
+            // routines_html = [];
+            for (let key in routinesByLevel) {
+                if (routinesByLevel.hasOwnProperty(key)) {
+                    routines_html.push(
+                        <div className={'routines-level__row'}>
+                            <h4>{key}</h4>
+                            <div className={'routines-level__scroll'}>
+                                {routinesByLevel[key]}
+                            </div>
+                        </div>
+                    );
+                    // console.log(key, routinesByLevel[key]);
+                }
+            }
+
+            // console.log(routinesByLevel);
+            //
+            // routines_html = routines.map((routine, i) =>
+            //     <Routine
+            //         key={i}
+            //         routine={routine}
+            //         onRoutineClick={() => this.handleRoutineLoad(i)}
+            //     />
+            // );
+
+        }
+
         return (
             <div className="calculator">
+                <div>
+                    <button className="btn btn-default routines-btn" onClick={() => this.handleRoutinesToggle()}>Routines</button>
+                </div>
+
+
                 <h4 className="calculator__score">
                     <small>Total Tariff:&nbsp;</small>
                     {score.toFixed(1)}
@@ -167,15 +217,11 @@ export class Calculator extends Component {
                 <div className="calculator__rows">
                     {calcRows}
                 </div>
-                {/*<div className="calculator__action-btns">*/}
-                {/*<div className="clearfix mt-2">*/}
-                {/*<button className="btn btn-primary">Save</button>*/}
-                {/*<button className="btn btn-default pull-right">Routines</button>*/}
-                {/*</div>*/}
-                {/*</div>*/}
+
                 <div className="calculator__errors">
                     {this.generatePositionErrors()}
                     {this.generateRepeatErrors()}
+                    {routines_html}
                 </div>
             </div>
         )
@@ -192,13 +238,13 @@ export class Calculator extends Component {
         }
         return (errorsRpt.length === 0) ?
             null :
-            <div className="errors highlight-orange">
+            (<div className="errors highlight-orange">
                 {errorsRpt}
                 <small>
                     <div>Repeats only allowed in Voluntary routines.</div>
                     <div>No tariff is awarded for repeated skill.</div>
                 </small>
-            </div>;
+            </div>);
     }
 
     generatePositionErrors() {
@@ -206,10 +252,8 @@ export class Calculator extends Component {
         for (let i = 0; i < consts.num_rows; i++) {
             // Check position errors
             let position = this.state.errors_position[i];
-            let error = null;
             if (position !== "") {
                 errorsPos.push(<div key={i}>{position}</div>);
-                error = "highlight-red"
             }
         }
         return (errorsPos.length === 0) ?

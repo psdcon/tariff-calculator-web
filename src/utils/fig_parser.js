@@ -1,3 +1,7 @@
+/*
+* This is a one use script for parsing fig into its individual components.
+* */
+
 const saltoRegex = /^(\d{1,2})/; //new RegExp("^(\d{1,2}) ", "g");
 const shapeRegex = /([o</])$/; // new RegExp("(o|<|/)", "gi");
 function figNotationArray(fig_notation) {
