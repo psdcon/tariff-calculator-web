@@ -4,1199 +4,749 @@
     "competition": "SSTO",
     "level": "Novice",
     "skills": [
-      [
-        "Front Drop",
-        null
-      ],
-      [
-        "To Feet from Front",
-        null
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Half Twist Jump",
-        null
-      ],
-      [
-        "Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Full Twist Jump",
-        null
-      ]
+      "Front Drop",
+      "To Feet from Front",
+      "Straddle Jump",
+      "Half Twist Jump",
+      "Seat Drop",
+      "Half Twist to Seat Drop",
+      "Half Twist to Feet from Seat",
+      "Tuck Jump",
+      "Pike Jump",
+      "Full Twist Jump"
     ],
-    "year": "2014"
+    "year": "2014",
+    "shapes": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
   },
   {
     "name": "Back",
     "competition": "SSTO",
     "level": "Novice",
     "skills": [
-      [
-        "Back Drop",
-        null
-      ],
-      [
-        "To Feet from Back",
-        null
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Half Twist Jump",
-        null
-      ],
-      [
-        "Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Full Twist Jump",
-        null
-      ]
+      "Back Drop",
+      "To Feet from Back",
+      "Straddle Jump",
+      "Half Twist Jump",
+      "Seat Drop",
+      "Half Twist to Seat Drop",
+      "Half Twist to Feet from Seat",
+      "Tuck Jump",
+      "Pike Jump",
+      "Full Twist Jump"
     ],
-    "year": "2014"
+    "year": "2014",
+    "shapes": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
   },
   {
     "name": "Front",
     "competition": "SSTO",
     "level": "Advanced",
     "skills": [
-      [
-        "Back Somersault",
-        2
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Back Somersault",
-        0
-      ],
-      [
-        "Barani",
-        0
-      ],
-      [
-        "Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Barani",
-        1
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Front Somersault",
-        1
-      ]
+      "Back Somersault",
+      "Straddle Jump",
+      "Back Somersault",
+      "Barani",
+      "Seat Drop",
+      "Half Twist to Feet from Seat",
+      "Pike Jump",
+      "Barani",
+      "Tuck Jump",
+      "Front Somersault"
     ],
-    "year": "2014"
+    "year": "2014",
+    "shapes": [
+      2,
+      null,
+      0,
+      0,
+      null,
+      null,
+      null,
+      1,
+      null,
+      1
+    ]
   },
   {
     "name": "Front",
     "competition": "SSTO",
     "level": "Intermediate",
     "skills": [
-      [
-        "Full Twist Jump",
-        null
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Back Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Back",
-        null
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Front Somersault",
-        0
-      ]
+      "Full Twist Jump",
+      "Straddle Jump",
+      "Seat Drop",
+      "Half Twist to Seat Drop",
+      "Half Twist to Feet from Seat",
+      "Pike Jump",
+      "Back Drop",
+      "Half Twist to Feet from Back",
+      "Tuck Jump",
+      "Front Somersault"
     ],
-    "year": "2014"
+    "year": "2014",
+    "shapes": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
   },
   {
     "name": "Back",
     "competition": "SSTO",
     "level": "Intermediate",
     "skills": [
-      [
-        "Back Somersault",
-        0
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Back Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Back",
-        null
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Full Twist Jump",
-        null
-      ]
+      "Back Somersault",
+      "Straddle Jump",
+      "Seat Drop",
+      "Half Twist to Seat Drop",
+      "Half Twist to Feet from Seat",
+      "Pike Jump",
+      "Back Drop",
+      "Half Twist to Feet from Back",
+      "Tuck Jump",
+      "Full Twist Jump"
     ],
-    "year": "2014"
+    "year": "2014",
+    "shapes": [
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
   },
   {
     "name": "Front",
     "competition": "SSTO",
     "level": "Intervanced",
     "skills": [
-      [
-        "Back Somersault",
-        0
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Full Twist Jump",
-        null
-      ],
-      [
-        "Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Barani",
-        0
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Front Somersault",
-        0
-      ]
+      "Back Somersault",
+      "Straddle Jump",
+      "Full Twist Jump",
+      "Seat Drop",
+      "Half Twist to Seat Drop",
+      "Half Twist to Feet from Seat",
+      "Pike Jump",
+      "Barani",
+      "Tuck Jump",
+      "Front Somersault"
     ],
-    "year": "2014"
+    "year": "2014",
+    "shapes": [
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0,
+      null,
+      0
+    ]
   },
   {
     "name": "Back",
     "competition": "SSTO",
     "level": "Intervanced",
     "skills": [
-      [
-        "Back Somersault",
-        2
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Back Somersault",
-        0
-      ],
-      [
-        "Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Full Twist Jump",
-        null
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Front Somersault",
-        0
-      ]
+      "Back Somersault",
+      "Straddle Jump",
+      "Back Somersault",
+      "Seat Drop",
+      "Half Twist to Seat Drop",
+      "Half Twist to Feet from Seat",
+      "Pike Jump",
+      "Full Twist Jump",
+      "Tuck Jump",
+      "Front Somersault"
     ],
-    "year": "2014"
+    "year": "2014",
+    "shapes": [
+      2,
+      null,
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
   },
   {
     "name": "Back",
     "competition": "SSTO",
     "level": "Advanced",
     "skills": [
-      [
-        "Back Somersault",
-        2
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Barani",
-        0
-      ],
-      [
-        "Half Twist Jump",
-        null
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Back Somersault",
-        0
-      ],
-      [
-        "Back Somersault to Seat",
-        0
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Front Somersault",
-        1
-      ]
+      "Back Somersault",
+      "Straddle Jump",
+      "Barani",
+      "Half Twist Jump",
+      "Tuck Jump",
+      "Back Somersault",
+      "Back Somersault to Seat",
+      "Half Twist to Feet from Seat",
+      "Pike Jump",
+      "Front Somersault"
     ],
-    "year": "2014"
+    "year": "2014",
+    "shapes": [
+      2,
+      null,
+      0,
+      null,
+      null,
+      0,
+      0,
+      null,
+      null,
+      1
+    ]
   },
   {
     "name": "Sample",
     "competition": "ISTO",
     "level": "Elite",
     "skills": [
-      [
-        "Back Somersault",
-        2
-      ],
-      [
-        "Barani",
-        2
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Back Somersault",
-        0
-      ],
-      [
-        "Barani",
-        0
-      ],
-      [
-        "Back Somersault",
-        1
-      ],
-      [
-        "Barani",
-        1
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Crash Dive",
-        0
-      ],
-      [
-        "Ball Out",
-        0
-      ]
+      "Back Somersault",
+      "Barani",
+      "Straddle Jump",
+      "Back Somersault",
+      "Barani",
+      "Back Somersault",
+      "Barani",
+      "Tuck Jump",
+      "Crash Dive",
+      "Ball Out"
     ],
-    "year": "2014"
+    "year": "2014",
+    "shapes": [
+      2,
+      2,
+      null,
+      0,
+      0,
+      1,
+      1,
+      null,
+      0,
+      0
+    ]
   },
   {
     "name": "Back",
     "competition": "ISTO",
     "level": "Intervanced",
     "skills": [
-      [
-        "Back Somersault",
-        2
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Back Somersault to Seat",
-        0
-      ],
-      [
-        "To Feet from Seat",
-        null
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Back Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Back",
-        null
-      ],
-      [
-        "Half Twist Jump",
-        null
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Front Somersault",
-        0
-      ]
+      "Back Somersault",
+      "Straddle Jump",
+      "Back Somersault to Seat",
+      "To Feet from Seat",
+      "Pike Jump",
+      "Back Drop",
+      "Half Twist to Feet from Back",
+      "Half Twist Jump",
+      "Tuck Jump",
+      "Front Somersault"
     ],
-    "year": "2014"
+    "year": "2014",
+    "shapes": [
+      2,
+      null,
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
   },
   {
     "name": "Back",
     "competition": "Intervarsities",
     "level": "Novice",
     "skills": [
-      [
-        "Full Twist Jump",
-        null
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Back Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Back",
-        null
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Half Twist Jump",
-        null
-      ]
+      "Full Twist Jump",
+      "Straddle Jump",
+      "Seat Drop",
+      "Half Twist to Seat Drop",
+      "Half Twist to Feet from Seat",
+      "Pike Jump",
+      "Back Drop",
+      "Half Twist to Feet from Back",
+      "Tuck Jump",
+      "Half Twist Jump"
     ],
-    "year": "2013"
+    "year": "2013",
+    "shapes": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
   },
   {
     "name": "Front",
     "competition": "Intervarsities",
     "level": "Novice",
     "skills": [
-      [
-        "Half Twist to Front Drop",
-        null
-      ],
-      [
-        "To Feet from Front",
-        null
-      ],
-      [
-        "Half Twist Jump",
-        null
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Full Twist Jump",
-        null
-      ]
+      "Half Twist to Front Drop",
+      "To Feet from Front",
+      "Half Twist Jump",
+      "Straddle Jump",
+      "Seat Drop",
+      "Half Twist to Seat Drop",
+      "Half Twist to Feet from Seat",
+      "Pike Jump",
+      "Tuck Jump",
+      "Full Twist Jump"
     ],
-    "year": "2013"
+    "year": "2013",
+    "shapes": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
   },
   {
     "name": "Front",
     "competition": "Intervarsities",
     "level": "Advanced",
     "skills": [
-      [
-        "Back Somersault",
-        2
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Back Somersault",
-        0
-      ],
-      [
-        "Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Barani",
-        0
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Front Somersault",
-        1
-      ],
-      [
-        "Front Somersault",
-        0
-      ]
+      "Back Somersault",
+      "Straddle Jump",
+      "Back Somersault",
+      "Seat Drop",
+      "Half Twist to Feet from Seat",
+      "Tuck Jump",
+      "Barani",
+      "Pike Jump",
+      "Front Somersault",
+      "Front Somersault"
     ],
-    "year": "2013"
+    "year": "2013",
+    "shapes": [
+      2,
+      null,
+      0,
+      null,
+      null,
+      null,
+      0,
+      null,
+      1,
+      0
+    ]
   },
   {
     "name": "Back",
     "competition": "Intervarsities",
     "level": "Advanced",
     "skills": [
-      [
-        "Back Somersault",
-        2
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Back Somersault",
-        0
-      ],
-      [
-        "Back Somersault to Seat",
-        0
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ],
-      [
-        "Half Twist Jump",
-        null
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Barani",
-        0
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Front Somersault",
-        0
-      ]
+      "Back Somersault",
+      "Straddle Jump",
+      "Back Somersault",
+      "Back Somersault to Seat",
+      "Half Twist to Feet from Seat",
+      "Half Twist Jump",
+      "Pike Jump",
+      "Barani",
+      "Tuck Jump",
+      "Front Somersault"
     ],
-    "year": "2013"
+    "year": "2013",
+    "shapes": [
+      2,
+      null,
+      0,
+      0,
+      null,
+      null,
+      null,
+      0,
+      null,
+      0
+    ]
   },
   {
     "name": "Front",
     "competition": "Intervarsities",
     "level": "Intermediate",
     "skills": [
-      [
-        "Half Twist to Front Drop",
-        null
-      ],
-      [
-        "To Feet from Front",
-        null
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Full Twist Jump",
-        null
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Front Somersault",
-        0
-      ]
+      "Half Twist to Front Drop",
+      "To Feet from Front",
+      "Straddle Jump",
+      "Seat Drop",
+      "Half Twist to Seat Drop",
+      "Half Twist to Feet from Seat",
+      "Pike Jump",
+      "Full Twist Jump",
+      "Tuck Jump",
+      "Front Somersault"
     ],
-    "year": "2013"
+    "year": "2013",
+    "shapes": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
   },
   {
     "name": "Cian Awsomeness",
     "competition": "ISTO",
     "level": "Elite",
     "skills": [
-      [
-        "Half Out",
-        1
-      ],
-      [
-        "Back Somersault",
-        2
-      ],
-      [
-        "Barani",
-        2
-      ],
-      [
-        "Double Back",
-        0
-      ],
-      [
-        "Barani",
-        0
-      ],
-      [
-        "Back Somersault",
-        0
-      ],
-      [
-        "2 and 3 Quarter Front Somersault",
-        0
-      ],
-      [
-        "Ball Out",
-        0
-      ],
-      [
-        "Full Out",
-        null
-      ],
-      [
-        "Barani",
-        1
-      ]
+      "Half Out",
+      "Back Somersault",
+      "Barani",
+      "Double Back",
+      "Barani",
+      "Back Somersault",
+      "2 and 3 Quarter Front Somersault",
+      "Ball Out",
+      "Full Out",
+      "Barani"
     ],
-    "year": null
+    "year": null,
+    "shapes": [
+      1,
+      2,
+      2,
+      0,
+      0,
+      0,
+      0,
+      0,
+      null,
+      1
+    ]
   },
   {
     "name": "Back",
     "competition": "Intervarsities",
     "level": "Intermediate",
     "skills": [
-      [
-        "Back Somersault",
-        0
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Full Twist Jump",
-        null
-      ],
-      [
-        "Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Back Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Back",
-        null
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Half Twist Jump",
-        null
-      ]
+      "Back Somersault",
+      "Straddle Jump",
+      "Full Twist Jump",
+      "Seat Drop",
+      "Half Twist to Feet from Seat",
+      "Pike Jump",
+      "Back Drop",
+      "Half Twist to Feet from Back",
+      "Tuck Jump",
+      "Half Twist Jump"
     ],
-    "year": "2013"
+    "year": "2013",
+    "shapes": [
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
   },
   {
     "name": "Barani",
     "competition": "ISTO",
     "level": "Intervanced",
     "skills": [
-      [
-        "Barani",
-        0
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Back Somersault",
-        0
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Half Twist to Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Seat Drop",
-        null
-      ],
-      [
-        "To Feet from Seat",
-        null
-      ],
-      [
-        "Full Twist Jump",
-        null
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Front Somersault",
-        0
-      ]
+      "Barani",
+      "Straddle Jump",
+      "Back Somersault",
+      "Pike Jump",
+      "Half Twist to Seat Drop",
+      "Half Twist to Seat Drop",
+      "To Feet from Seat",
+      "Full Twist Jump",
+      "Tuck Jump",
+      "Front Somersault"
     ],
-    "year": "2014"
+    "year": "2014",
+    "shapes": [
+      0,
+      null,
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
   },
   {
     "name": "Back",
     "competition": "ISTO",
     "level": "Novice",
     "skills": [
-      [
-        "Back Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Back",
-        null
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Half Twist Jump",
-        null
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Full Twist Jump",
-        null
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ]
+      "Back Drop",
+      "Half Twist to Feet from Back",
+      "Pike Jump",
+      "Half Twist Jump",
+      "Straddle Jump",
+      "Full Twist Jump",
+      "Tuck Jump",
+      "Seat Drop",
+      "Half Twist to Seat Drop",
+      "Half Twist to Feet from Seat"
     ],
-    "year": "2014"
+    "year": "2014",
+    "shapes": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
   },
   {
     "name": "Front",
     "competition": "ISTO",
     "level": "Novice",
     "skills": [
-      [
-        "Full Twist Jump",
-        null
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Front Drop",
-        null
-      ],
-      [
-        "To Feet from Front",
-        null
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Half Twist Jump",
-        null
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Half Twist to Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ]
+      "Full Twist Jump",
+      "Straddle Jump",
+      "Front Drop",
+      "To Feet from Front",
+      "Pike Jump",
+      "Half Twist Jump",
+      "Tuck Jump",
+      "Half Twist to Seat Drop",
+      "Half Twist to Seat Drop",
+      "Half Twist to Feet from Seat"
     ],
-    "year": "2014"
+    "year": "2014",
+    "shapes": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
   },
   {
     "name": "Back",
     "competition": "ISTO",
     "level": "Intermediate",
     "skills": [
-      [
-        "Full Twist Jump",
-        null
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Back Somersault",
-        0
-      ],
-      [
-        "Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Seat Drop",
-        null
-      ],
-      [
-        "To Feet from Seat",
-        null
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Half Twist Jump",
-        null
-      ],
-      [
-        "Back Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Back",
-        null
-      ]
+      "Full Twist Jump",
+      "Straddle Jump",
+      "Back Somersault",
+      "Seat Drop",
+      "Half Twist to Seat Drop",
+      "To Feet from Seat",
+      "Tuck Jump",
+      "Half Twist Jump",
+      "Back Drop",
+      "Half Twist to Feet from Back"
     ],
-    "year": "2014"
+    "year": "2014",
+    "shapes": [
+      null,
+      null,
+      0,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
   },
   {
     "name": "Front",
     "competition": "ISTO",
     "level": "Intermediate",
     "skills": [
-      [
-        "Front Drop",
-        null
-      ],
-      [
-        "To Feet from Front",
-        null
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Full Twist Jump",
-        null
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Half Twist to Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Front Somersault",
-        0
-      ]
+      "Front Drop",
+      "To Feet from Front",
+      "Straddle Jump",
+      "Full Twist Jump",
+      "Tuck Jump",
+      "Half Twist to Seat Drop",
+      "Half Twist to Seat Drop",
+      "Half Twist to Feet from Seat",
+      "Pike Jump",
+      "Front Somersault"
     ],
-    "year": "2014"
+    "year": "2014",
+    "shapes": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0
+    ]
   },
   {
     "name": "Back",
     "competition": "ISTO",
     "level": "Advanced",
     "skills": [
-      [
-        "Back Somersault",
-        2
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Barani",
-        0
-      ],
-      [
-        "Back Somersault",
-        0
-      ],
-      [
-        "Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ],
-      [
-        "Half Twist Jump",
-        null
-      ],
-      [
-        "Barani",
-        1
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Front Somersault",
-        0
-      ]
+      "Back Somersault",
+      "Tuck Jump",
+      "Barani",
+      "Back Somersault",
+      "Seat Drop",
+      "Half Twist to Feet from Seat",
+      "Half Twist Jump",
+      "Barani",
+      "Straddle Jump",
+      "Front Somersault"
     ],
-    "year": "2014"
+    "year": "2014",
+    "shapes": [
+      2,
+      null,
+      0,
+      0,
+      null,
+      null,
+      null,
+      1,
+      null,
+      0
+    ]
   },
   {
     "name": "Pike",
     "competition": "ISTO",
     "level": "Advanced",
     "skills": [
-      [
-        "Back Somersault",
-        2
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Back Somersault",
-        0
-      ],
-      [
-        "Pike Jump",
-        null
-      ],
-      [
-        "Back Somersault",
-        1
-      ],
-      [
-        "Barani",
-        1
-      ],
-      [
-        "Half Twist to Seat Drop",
-        null
-      ],
-      [
-        "Half Twist to Feet from Seat",
-        null
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Front Somersault",
-        0
-      ]
+      "Back Somersault",
+      "Tuck Jump",
+      "Back Somersault",
+      "Pike Jump",
+      "Back Somersault",
+      "Barani",
+      "Half Twist to Seat Drop",
+      "Half Twist to Feet from Seat",
+      "Straddle Jump",
+      "Front Somersault"
     ],
-    "year": "2014"
+    "year": "2014",
+    "shapes": [
+      2,
+      null,
+      0,
+      null,
+      1,
+      1,
+      null,
+      null,
+      null,
+      0
+    ]
   },
   {
     "name": "example",
     "competition": "ISTO",
     "level": "Elite",
     "skills": [
-      [
-        "Back Somersault",
-        2
-      ],
-      [
-        "Barani",
-        2
-      ],
-      [
-        "Straddle Jump",
-        null
-      ],
-      [
-        "Back Somersault",
-        0
-      ],
-      [
-        "Barani",
-        0
-      ],
-      [
-        "Back Somersault",
-        1
-      ],
-      [
-        "Barani",
-        1
-      ],
-      [
-        "Tuck Jump",
-        null
-      ],
-      [
-        "Crash Dive",
-        0
-      ],
-      [
-        "Ball Out",
-        0
-      ]
+      "Back Somersault",
+      "Barani",
+      "Straddle Jump",
+      "Back Somersault",
+      "Barani",
+      "Back Somersault",
+      "Barani",
+      "Tuck Jump",
+      "Crash Dive",
+      "Ball Out"
     ],
-    "year": "2014"
+    "year": "2014",
+    "shapes": [
+      2,
+      2,
+      null,
+      0,
+      0,
+      1,
+      1,
+      null,
+      0,
+      0
+    ]
   }
 ]

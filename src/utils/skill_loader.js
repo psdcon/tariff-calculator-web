@@ -1,4 +1,4 @@
-import {skills} from "../data/tariff_skills";
+import skills from '../data/databases/new_tariff_skills.json'
 
 // Does some stuff
 //TODO exaplin these functions
