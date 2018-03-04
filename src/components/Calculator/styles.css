@@ -1,5 +1,4 @@
 /* Grid styles */
-/* Calculator*/
 .calculator__score {
     grid-area: score;
 }
@@ -21,12 +20,16 @@
 /* If screen greater than <size>, split into 2 columns*/
 @media (min-width: 700px) {
     .calculator {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 2fr 1fr;/*repeat(2, 1fr);*/
         grid-template-areas: "score ." "rows errors";
         grid-column-gap: 1em;
     }
 }
-
+@media (min-width: 1080px) {
+    .calculator {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 /*End grid styles*/
 
 /* General styles */

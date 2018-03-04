@@ -33,26 +33,68 @@ export class Calculator extends Component {
         //     skills: skills
         // });
         // this.handleSkillChange(0, {value: skills[0]});
+        let skz = [109, 2, 3, 4, 55, 60, 7].concat(new Array(3).fill(null));
+        let shps = [1, 1].concat(new Array(8).fill(1));
+        this.setStateAllRows(skz, shps)
     }
 
-    setStateAllRows(skillsState, shapesState) {
-        let tariffsState = this.state.tariffs.slice();
-        let figNotationsState = this.state.fig_notations.slice();
-
-        // Get tariff values
-        for (let i in skillsState) {
-            let skill = skills[i];
-            tariffsState[i] = skill.tariff;
-            figNotationsState[i] = skill.fig_notation;
+    setStateAllRows(skillIndexes, shapesState) {
+        if (skillIndexes.length !== consts.num_rows || shapesState.length !== consts.num_rows) {
+            console.log('Error: Too many skills in routine:', skillIndexes.length, shapesState.length);
         }
 
-        const errorsPosState = this.checkPositionErrors(skillsState);
-        const errorsRptState = this.checkRepeatErrors(skillsState, shapesState);
+        let tariffsState = new Array(10).fill(0.0);
+        let figNotationsState = new Array(10).fill(new Array(3).fill(""));
 
+        // Get tariff values
+        for (let i = 0; i < skillIndexes.length; i++) {
+            let skillIndex = skillIndexes[i];
+            if (skillIndex === null) {
+                shapesState[i] = null;
+                continue;
+            }
+
+            // Get skill obj
+            let skill = skills[skillIndex];
+            if (typeof skill === 'undefined') {
+                console.log('Error: Could not find skill in list of skills:', skillIndex);
+                skillIndexes[i] = null;
+                shapesState[i] = null;
+                continue;
+            }
+
+            // If there was a shape specified but the skill shouldn't have one.
+            if (shapesState[i] !== null && skill.shape_bonus === 0) {
+                shapesState[i] = null;
+                console.log('Error: Ignoring shape bonus of', shapesState[i], 'for skill', skill.name)
+            }
+            // Else a shape wasn't provided but it should be enabled...
+            else if (shapesState[i] === null && skill.shape_bonus > 0) {
+                shapesState[i] = 0;
+            }
+
+            // Updates states with appropriate values from skill obj
+            figNotationsState[i] = skill.fig_notation;
+            if (shapesState[i])
+                figNotationsState[i][2] = consts.figNotationShapes[shapesState[i]];
+
+            let tariff = skill.tariff;
+            if (shapesState[i] > 0) { // shapeIndex = 1,2 is pike, straddle
+                tariff += skill.shape_bonus;
+            }
+            tariffsState[i] = tariff;
+        }
+
+        // Check errors on all rows
+        const errorsPosState = this.checkPositionErrors(skillIndexes);
+        const errorsRptState = this.checkRepeatErrors(skillIndexes, shapesState);
+
+        // Update state with results
         this.setState({
-            skills: skillsState,
+            skills: skillIndexes,
             shapes: shapesState,
             tariffs: tariffsState,
+            fig_notations: figNotationsState,
             errors_position: errorsPosState,
             errors_repeat: errorsRptState
         });
@@ -79,7 +121,6 @@ export class Calculator extends Component {
             }
             tariffsState[i] = skill.tariff;
             figNotationsState[i] = skill.fig_notation;
-
         }
 
         const errorsPosState = this.checkPositionErrors(skillsState);
@@ -101,6 +142,7 @@ export class Calculator extends Component {
         let figNotationsState = this.state.fig_notations.slice();
         const skill = skills[this.state.skills[i]];
 
+        // Handle rolling over shapeIndex to keep it between 0 and 2 inclusive
         let shapeIndex = shapesState[i];
         shapeIndex = (shapeIndex === 2) ? 0 : shapeIndex + 1;
         shapesState[i] = shapeIndex;
@@ -206,10 +248,10 @@ export class Calculator extends Component {
         for (let i = 0; i < consts.num_rows; i++) {
             // Check position errors
             let position = this.state.errors_position[i];
-            let error = null;
+            // let error;
             if (position !== "") {
                 errorsPos.push(<div key={i}>{position}</div>);
-                error = "highlight-red"
+                // error = "highlight-red"
             }
         }
         return (errorsPos.length === 0) ?
@@ -217,19 +259,21 @@ export class Calculator extends Component {
             <div className="errors highlight-red">{errorsPos}</div>;
     }
 
+    // Called 10 times whenever a skill is changed to filter <select> options
     filterOptions(i) {
         if (i === 0) {
             return filterSelectOptions('feet');
         }
         // If there's a previous skill
         else if (this.state.skills[i - 1] !== null) {
-            // If not the last row, and there's a next skill
-            if (i !== consts.num_rows && this.state.skills[i + 1] !== null) {
+            // If not the last row (don't off by one), and there's a next skill
+            if (i !== consts.num_rows - 1 && this.state.skills[i + 1] !== null) {
                 return filterSelectOptions(
                     skills[this.state.skills[i - 1]].end_position,
-                    skills[this.state.skills[i + 1]].start_position);
+                    skills[this.state.skills[i + 1]].start_position
+                );
             } else {
-                // No next row
+                // No next row, i.e. last row
                 return filterSelectOptions(skills[this.state.skills[i - 1]].end_position);
             }
         }

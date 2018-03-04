@@ -1,8 +1,20 @@
-.tariff-value:disabled {
-    display: inline-block;
-    width: 3em;
+/*.tariff-value:disabled {*/
+    /*display: inline-block;*/
+    /*width: 2.2em;*/
+    /*background-color: #fff;*/
+    /*cursor: auto;*/
+    /*text-align: right;*/
+    /*padding-left: 0;*/
+/*}*/
+
+.tariff-value {
+    color: #464a4c;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25em;
     background-color: #fff;
-    cursor: auto;
-    text-align: right;
-    padding-left: 0;
+
+    padding: .5em .3em;
+    /*min-width: 2.2em;*/
+    text-align: center;
+    white-space: nowrap;
 }
