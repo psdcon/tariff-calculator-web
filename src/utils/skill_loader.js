@@ -64,3 +64,13 @@ export function filterSelectOptions(startPosition, endPosition = null) {
     }
     return newOptions;
 }
+
+export function skillIndexFromName(skillName) {
+    for(let i = 0; i < skills.length; i += 1) {
+        if(skills[i]['name'] === skillName) {
+            return i;
+        }
+    }
+    console.log('Error: Didn\'t find skill:', skillName);
+    return -1;
+}

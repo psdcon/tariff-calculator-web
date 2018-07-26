@@ -1,2 +1,4 @@
 export const figNotationShapes = ['o', '<', '/'];
-export const num_rows = 10;
+export const numRows = 10;
+
+export const shapeNames = ['Tuck', 'Straddle', 'Straight'];

@@ -4,14 +4,13 @@ import './styles.css';
 // Required to make Calculator look awesome. (so maybe they should be part of the calc module...
 import './styles_bs4.css';
 
-import {filterSelectOptions} from '../../utils/skill_loader'
-// import {routines} from "../../data/tariff_routines";
-// import {skills} from "../../data/tariff_skills";
+import {filterSelectOptions, skillIndexFromName} from '../../utils/skill_loader'
 import skills from '../../data/databases/new_tariff_skills.json'
 import routines from '../../data/databases/new_routines.json'
 import * as consts from '../../utils/consts'
 import {CalculatorRow} from "../CalculatorRow";
-import {Routine} from "../Routine/index";
+import {RoutineLevel} from "../RoutinesLevel";
+import {RoutineCard} from "../RoutinesLevel/RoutineCard";
 
 export class Calculator extends Component {
     constructor() {
@@ -21,11 +20,11 @@ export class Calculator extends Component {
             skills: new Array(10).fill(null),
             shapes: new Array(10).fill(null),
             tariffs: new Array(10).fill(0.0),
-            fig_notations: new Array(10).fill(new Array(3).fill("")),
+            figNotations: new Array(10).fill(new Array(3).fill("")),
 
-            errors_position: new Array(10).fill(""),
-            errors_repeat: new Array(10).fill(""),
-            show_routines: false
+            errorsPosition: new Array(10).fill(""),
+            errorsRepeat: new Array(10).fill(""),
+            showRoutines: false
         };
     }
 
@@ -44,7 +43,7 @@ export class Calculator extends Component {
     }
 
     setStateAllRows(skillIndexes, shapesState) {
-        if (skillIndexes.length !== consts.num_rows || shapesState.length !== consts.num_rows) {
+        if (skillIndexes.length !== consts.numRows || shapesState.length !== consts.numRows) {
             console.log('Error: Too many skills in routine:', skillIndexes.length, shapesState.length);
         }
 
@@ -62,30 +61,30 @@ export class Calculator extends Component {
             // Get skill obj
             let skill = skills[skillIndex];
             if (typeof skill === 'undefined') {
-                console.log('Error: Could not find skill in list of skills:', skillIndex);
+                console.log('Error: Could not find skill index in list of skills:', skillIndex);
                 skillIndexes[i] = null;
                 shapesState[i] = null;
                 continue;
             }
 
             // If there was a shape specified but the skill shouldn't have one.
-            if (shapesState[i] !== null && skill.shape_bonus === 0) {
+            if (shapesState[i] !== null && skill.shapeBonus === 0) {
+                console.log('Warning: Resetting shape bonus of', shapesState[i], 'to null for skill', skill.name);
                 shapesState[i] = null;
-                console.log('Error: Ignoring shape bonus of', shapesState[i], 'for skill', skill.name)
             }
             // Else a shape wasn't provided but it should be enabled...
-            else if (shapesState[i] === null && skill.shape_bonus > 0) {
+            else if (shapesState[i] === null && skill.shapeBonus > 0) {
                 shapesState[i] = 0;
             }
 
             // Updates states with appropriate values from skill obj
-            figNotationsState[i] = skill.fig_notation;
+            figNotationsState[i] = skill.figNotation;
             if (shapesState[i])
                 figNotationsState[i][2] = consts.figNotationShapes[shapesState[i]];
 
             let tariff = skill.tariff;
             if (shapesState[i] > 0) { // shapeIndex = 1,2 is pike, straddle
-                tariff += skill.shape_bonus;
+                tariff += skill.shapeBonus;
             }
             tariffsState[i] = tariff;
         }
@@ -99,21 +98,25 @@ export class Calculator extends Component {
             skills: skillIndexes,
             shapes: shapesState,
             tariffs: tariffsState,
-            fig_notations: figNotationsState,
-            errors_position: errorsPosState,
-            errors_repeat: errorsRptState
+            figNotations: figNotationsState,
+            errorsPosition: errorsPosState,
+            errorsRepeat: errorsRptState
         });
     }
 
     handleRoutineLoad(routineIndex) {
-        console.log(routineIndex);
+        // console.log(routineIndex);
         const routine = routines[routineIndex];
-        this.setStateAllRows(routine.skills, routine.shapes)
+        const routineSkillIndices = routine.skills.map((skillName)=>(
+            skillIndexFromName(skillName)
+        ));
+        // checkout barani shape bonus
+        this.setStateAllRows(routineSkillIndices, routine.shapes)
     }
 
     handleRoutinesToggle() {
-        const showRoutines = !this.state.show_routines;
-        this.setState({show_routines: showRoutines})
+        const showRoutines = !this.state.showRoutines;
+        this.setState({showRoutines: showRoutines})
     }
 
     // onChange handler for react-selects
@@ -121,7 +124,7 @@ export class Calculator extends Component {
         let skillsState = this.state.skills.slice();
         let tariffsState = this.state.tariffs.slice();
         let shapesState = this.state.shapes.slice();
-        let figNotationsState = this.state.fig_notations.slice();
+        let figNotationsState = this.state.figNotations.slice();
 
         if (data === null) {
             skillsState[i] = null;
@@ -131,12 +134,12 @@ export class Calculator extends Component {
         } else {
             skillsState[i] = data.value;
             let skill = skills[skillsState[i]];
-            if (skill.shape_bonus > 0.0) {
+            if (skill.shapeBonus > 0.0) {
                 // Enable shape button
                 shapesState[i] = 0;
             }
             tariffsState[i] = skill.tariff;
-            figNotationsState[i] = skill.fig_notation;
+            figNotationsState[i] = skill.figNotation;
         }
 
         const errorsPosState = this.checkPositionErrors(skillsState);
@@ -146,16 +149,16 @@ export class Calculator extends Component {
             skills: skillsState,
             shapes: shapesState,
             tariffs: tariffsState,
-            fig_notations: figNotationsState,
-            errors_position: errorsPosState,
-            errors_repeat: errorsRptState
+            figNotations: figNotationsState,
+            errorsPosition: errorsPosState,
+            errorsRepeat: errorsRptState
         });
     }
 
     handleShapeClick(i) {
         let tariffsState = this.state.tariffs.slice();
         let shapesState = this.state.shapes.slice();
-        let figNotationsState = this.state.fig_notations.slice();
+        let figNotationsState = this.state.figNotations.slice();
         const skill = skills[this.state.skills[i]];
 
         // Handle rolling over shapeIndex to keep it between 0 and 2 inclusive
@@ -168,7 +171,7 @@ export class Calculator extends Component {
 
         let tariff = skill.tariff;
         if (shapeIndex > 0) { // shapeIndex = 1,2 is pike, straddle
-            tariff += skill.shape_bonus;
+            tariff += skill.shapeBonus;
         }
         tariffsState[i] = tariff;
 
@@ -178,23 +181,23 @@ export class Calculator extends Component {
         this.setState({
             shapes: shapesState,
             tariffs: tariffsState,
-            fig_notations: figNotationsState,
-            errors_repeat: errorsRptState
+            figNotations: figNotationsState,
+            errorsRepeat: errorsRptState
         });
     }
 
     render() {
         let score = 0;
         let calcRows = [];
-        for (let i = 0; i < consts.num_rows; i++) {
+        for (let i = 0; i < consts.numRows; i++) {
             // Flag to <TariffValue> to show 'Rpt' instead of <this.state.tariffs[i]>
-            const tariffValueRpt = Boolean(this.state.errors_repeat[i]);
+            const tariffValueRpt = Boolean(this.state.errorsRepeat[i]);
             if (!tariffValueRpt) {
                 score += this.state.tariffs[i];
             }
 
             // If there's an error with the position, highlight the offending row.
-            const error = (this.state.errors_position[i]) ? "highlight-red" : null;
+            const error = (this.state.errorsPosition[i]) ? "highlight-red" : null;
 
             // Get the select options for this row, filtered.
             const selectedOptions = this.filterOptions(i);
@@ -210,49 +213,40 @@ export class Calculator extends Component {
                     shapeIndex={this.state.shapes[i]}
                     tariff={this.state.tariffs[i]}
                     tariffValueRpt={tariffValueRpt}
-                    figNotation={this.state.fig_notations[i]}
+                    figNotation={this.state.figNotations[i]}
                     error={error}
                 />
             )
         }
 
         // Render routines if the toggle button has been pressed.
-        let routines_html = [];
-        if (this.state.show_routines) {
+        let routinesHTML = [];
+        if (this.state.showRoutines) {
+            // Create RoutineCard cards for each level
             let routinesByLevel = {'Novice': [], 'Intermediate': [], 'Intervanced': [], 'Advanced': [], 'Elite': []};
             for (let i = 0; i < routines.length; i++) {
                 const routine = routines[i];
-                routinesByLevel[routine.level].push(<Routine
-                    key={i}
-                    routine={routine}
-                    onRoutineClick={() => this.handleRoutineLoad(i)}
-                />)
+                routinesByLevel[routine.level].push(
+                    <RoutineCard
+                        key={i}
+                        routine={routine}
+                        onRoutineClick={() => this.handleRoutineLoad(i)}/>
+                )
             }
-            // routines_html = [];
-            for (let key in routinesByLevel) {
-                if (routinesByLevel.hasOwnProperty(key)) {
-                    routines_html.push(
-                        <div className={'routines-level__row'}>
-                            <h4>{key}</h4>
-                            <div className={'routines-level__scroll'}>
-                                {routinesByLevel[key]}
-                            </div>
-                        </div>
+
+            // Create routine rows for each skill level to contain the RoutineCards
+            let count = 0;
+            for (let skillLevel in routinesByLevel) {
+                if (routinesByLevel.hasOwnProperty(skillLevel)) {
+                    count += 1;
+                    routinesHTML.push(
+                        <RoutineLevel
+                            key={count}
+                            routineSkillLevel={skillLevel}
+                            routines={routinesByLevel[skillLevel]}/>
                     );
-                    // console.log(key, routinesByLevel[key]);
                 }
             }
-
-            // console.log(routinesByLevel);
-            //
-            // routines_html = routines.map((routine, i) =>
-            //     <Routine
-            //         key={i}
-            //         routine={routine}
-            //         onRoutineClick={() => this.handleRoutineLoad(i)}
-            //     />
-            // );
-
         }
 
         return (
@@ -260,7 +254,6 @@ export class Calculator extends Component {
                 <div>
                     <button className="btn btn-default routines-btn" onClick={() => this.handleRoutinesToggle()}>Routines</button>
                 </div>
-
 
                 <h4 className="calculator__score">
                     <small>Total Tariff:&nbsp;</small>
@@ -270,10 +263,11 @@ export class Calculator extends Component {
                     {calcRows}
                 </div>
 
+                {/*The routines are stuck in here for convenience...*/}
                 <div className="calculator__errors">
+                    {routinesHTML}
                     {this.generatePositionErrors()}
                     {this.generateRepeatErrors()}
-                    {routines_html}
                 </div>
             </div>
         )
@@ -281,9 +275,9 @@ export class Calculator extends Component {
 
     generateRepeatErrors() {
         let errorsRpt = [];
-        for (let i = 0; i < consts.num_rows; i++) {
+        for (let i = 0; i < consts.numRows; i++) {
             //Check repeat errors
-            let repeat = this.state.errors_repeat[i];
+            let repeat = this.state.errorsRepeat[i];
             if (repeat) {
                 errorsRpt.push(<div key={i}>{repeat}</div>);
             }
@@ -301,9 +295,9 @@ export class Calculator extends Component {
 
     generatePositionErrors() {
         let errorsPos = [];
-        for (let i = 0; i < consts.num_rows; i++) {
+        for (let i = 0; i < consts.numRows; i++) {
             // Check position errors
-            let position = this.state.errors_position[i];
+            let position = this.state.errorsPosition[i];
             if (position !== "") {
                 errorsPos.push(<div key={i}>{position}</div>);
             }
@@ -321,14 +315,14 @@ export class Calculator extends Component {
         // If there's a previous skill
         else if (this.state.skills[i - 1] !== null) {
             // If not the last row (don't off by one), and there's a next skill
-            if (i !== consts.num_rows - 1 && this.state.skills[i + 1] !== null) {
+            if (i !== consts.numRows - 1 && this.state.skills[i + 1] !== null) {
                 return filterSelectOptions(
-                    skills[this.state.skills[i - 1]].end_position,
-                    skills[this.state.skills[i + 1]].start_position
+                    skills[this.state.skills[i - 1]].endPosition,
+                    skills[this.state.skills[i + 1]].startPosition
                 );
             } else {
                 // No next row, i.e. last row
-                return filterSelectOptions(skills[this.state.skills[i - 1]].end_position);
+                return filterSelectOptions(skills[this.state.skills[i - 1]].endPosition);
             }
         }
         else {
@@ -336,7 +330,7 @@ export class Calculator extends Component {
         }
     }
 
-    static checkPositionErrors(skillsState) {
+    checkPositionErrors(skillsState) {
         // Check for landing and starting position matches
         let errorsPosState = new Array(10).fill("");
 
@@ -347,29 +341,29 @@ export class Calculator extends Component {
             if (i > 0
                 && skillsState[i] !== null
                 && skillsState[i - 1] !== null
-                && !(skills[skillsState[i - 1]].end_position === skills[skillsState[i]].start_position)) {
+                && !(skills[skillsState[i - 1]].endPosition === skills[skillsState[i]].startPosition)) {
 
-                errorsPosState[i] = `Skill ${i + 1} starts from ${skills[skillsState[i]].start_position} `
-                    + `but the previous skill ends with ${skills[skillsState[i - 1]].end_position}.`;
+                errorsPosState[i] = `Skill ${i + 1} starts from ${skills[skillsState[i]].startPosition} `
+                    + `but the previous skill ends with ${skills[skillsState[i - 1]].endPosition}.`;
             }
             if (i === 0
                 && skillsState[i] !== null
-                && skills[skillsState[i]].start_position !== 'feet') {
+                && skills[skillsState[i]].startPosition !== 'feet') {
 
                 errorsPosState[i] = `The first skill should start from feet.`;
             }
             // if (i < 10
             //     && skillsState[i + 1] !== null
-            //     && !(skills[skillsState[i + 1]].start_position === skill.end_position)) {
+            //     && !(skills[skillsState[i + 1]].startPosition === skill.endPosition)) {
             //
-            //     errorsPosState[i] += `Skill ${i + 1} ends with ${skill.end_position} but the next skill starts from ${skills[skillsState[i + 1]].start_position}.`;
+            //     errorsPosState[i] += `Skill ${i + 1} ends with ${skill.endPosition} but the next skill starts from ${skills[skillsState[i + 1]].startPosition}.`;
             // }
         }
 
         return errorsPosState;
     }
 
-    static checkRepeatErrors(skillsState, shapesState) {
+    checkRepeatErrors(skillsState, shapesState) {
         let errorsRptState = new Array(10).fill("");
 
         // Check for repeat
