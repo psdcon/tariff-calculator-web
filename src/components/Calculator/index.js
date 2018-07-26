@@ -28,19 +28,19 @@ export class Calculator extends Component {
         };
     }
 
-    componentDidMount() {
-        // let skills = new Array(10).fill(null);
-        // skills[0] = 12;
-        // skills[1] = 1;
-        // skills[2] = 12;
-        // this.setState({
-        //     skills: skills
-        // });
-        // this.handleSkillChange(0, {value: skills[0]});
-        let skz = [109, 2, 3, 4, 55, 60, 7].concat(new Array(3).fill(null));
-        let shps = [1, 1].concat(new Array(8).fill(1));
-        this.setStateAllRows(skz, shps)
-    }
+    // componentDidMount() {
+    //     // let skills = new Array(10).fill(null);
+    //     // skills[0] = 12;
+    //     // skills[1] = 1;
+    //     // skills[2] = 12;
+    //     // this.setState({
+    //     //     skills: skills
+    //     // });
+    //     // this.handleSkillChange(0, {value: skills[0]});
+    //     let skz = [109, 2, 3, 4, 55, 60, 7].concat(new Array(3).fill(null));
+    //     let shps = [1, 1].concat(new Array(8).fill(1));
+    //     this.setStateAllRows(skz, shps)
+    // }
 
     setStateAllRows(skillIndexes, shapesState) {
         if (skillIndexes.length !== consts.numRows || shapesState.length !== consts.numRows) {
@@ -251,7 +251,7 @@ export class Calculator extends Component {
 
         return (
             <div className="calculator">
-                <div>
+                <div className="routine-btn-cont">
                     <button className="btn btn-default routines-btn" onClick={() => this.handleRoutinesToggle()}>Routines</button>
                 </div>
 

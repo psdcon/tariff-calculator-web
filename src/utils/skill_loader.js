@@ -19,8 +19,8 @@ function buildCategories() {
                 'label': skill.name,
                 // Custom attrs on Select Options
                 'tariff': skill.tariff.toFixed(1),
-                'start_position': skill.start_position,
-                'end_position': skill.end_position,
+                'startPosition': skill.startPosition,
+                'endPosition': skill.endPosition,
                 'makeDim': false
             });
         }
@@ -44,6 +44,7 @@ let selectCategories = buildCategories();
 let selectOptions = buildOptions(selectCategories);
 
 export function filterSelectOptions(startPosition, endPosition = null) {
+    // Make a copy of object in a really blunt way...
     let newOptions = JSON.parse(JSON.stringify(selectOptions));
     if (startPosition === null && endPosition === null){
         return newOptions
@@ -53,11 +54,11 @@ export function filterSelectOptions(startPosition, endPosition = null) {
         let options = newOptions[i].options;
         for (let k = 0; k < options.length; k++) {
             let option = options[k];
-            if (option.start_position !== startPosition) {
+            if (option.startPosition !== startPosition) {
                 option.makeDim = true;
             }
             if (endPosition !== null
-                && option.end_position !== endPosition) {
+                && option.endPosition !== endPosition) {
                 option.makeDim = true;
             }
         }

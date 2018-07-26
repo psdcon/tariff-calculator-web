@@ -13,6 +13,7 @@
 }
 
 .calculator {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "score" "routines-btn-row" "errors" "rows";
@@ -24,6 +25,10 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: "score routines-btn-row" "rows errors";
         grid-column-gap: 1em;
+    }
+
+    .routine-btn-cont {
+        position: relative;
     }
 }
 /*End grid styles*/
