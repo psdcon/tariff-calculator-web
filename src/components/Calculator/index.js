@@ -68,17 +68,18 @@ export class Calculator extends Component {
             }
 
             // If there was a shape specified but the skill shouldn't have one.
-            if (shapesState[i] !== null && skill.shapeBonus === 0) {
+            if (shapesState[i] !== null && skill.shapeBonus === null) {
                 console.log('Warning: Resetting shape bonus of', shapesState[i], 'to null for skill', skill.name);
                 shapesState[i] = null;
             }
             // Else a shape wasn't provided but it should be enabled...
-            else if (shapesState[i] === null && skill.shapeBonus > 0) {
+            else if (shapesState[i] === null && skill.shapeBonus !== null) {
+                console.log('Warning: Resetting shape bonus of', shapesState[i], 'to 0 for skill', skill.name);
                 shapesState[i] = 0;
             }
 
             // Updates states with appropriate values from skill obj
-            figNotationsState[i] = skill.figNotation;
+            figNotationsState[i] = skill.figNotation.slice();
             if (shapesState[i])
                 figNotationsState[i][2] = consts.figNotationShapes[shapesState[i]];
 
@@ -132,14 +133,14 @@ export class Calculator extends Component {
             tariffsState[i] = 0.0;
             figNotationsState[i] = new Array(3).fill("");
         } else {
-            skillsState[i] = data.value;
+            skillsState[i] = data.value; // update state with skill index from <select>
             let skill = skills[skillsState[i]];
-            if (skill.shapeBonus > 0.0) {
+            if (skill.shapeBonus !== null) {
                 // Enable shape button
                 shapesState[i] = 0;
             }
             tariffsState[i] = skill.tariff;
-            figNotationsState[i] = skill.figNotation;
+            figNotationsState[i] = skill.figNotation.slice();
         }
 
         const errorsPosState = this.checkPositionErrors(skillsState);
@@ -247,6 +248,10 @@ export class Calculator extends Component {
                     );
                 }
             }
+
+            routinesHTML.push(<p key='nonsense' className='pull-right'>
+                Made with <span title='hands' style={{'fontSize':'3em'}} role='img' aria-label='hands'>👐</span> for UCDTC by <a href='http://apaulling.com/' target='_blank' rel="noopener noreferrer">Paul Connolly</a>
+            </p>)
         }
 
         return (

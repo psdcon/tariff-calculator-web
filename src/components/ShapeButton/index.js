@@ -24,8 +24,10 @@ export const ShapeBtn = function({shapeIndex, onClick}) {
     const image = (shapeIndex === null) ? images[0]: images[shapeIndex];
     const disabled = shapeIndex === null;
 
+    const title = disabled? 'This skill cannot have a shape': 'Click to change shape';
+
     return (
-        <button type="button" className="btn-bs4 shape-btn" disabled={disabled} onClick={onClick}>
+        <button type="button" className="btn-bs4 shape-btn" title={title} disabled={disabled} onClick={onClick}>
             <img src={image.url} alt={image.alt}/>
         </button>
     )

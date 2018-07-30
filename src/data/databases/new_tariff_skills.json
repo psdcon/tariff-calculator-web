@@ -5,7 +5,7 @@
     "category": "Shape",
     "figNotation": ["","","o"],
     "tariff": 0,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "feet"
   },
@@ -15,7 +15,7 @@
     "category": "Shape",
     "figNotation": ["","","<"],
     "tariff": 0,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "feet"
   },
@@ -25,7 +25,7 @@
     "category": "Shape",
     "figNotation": ["0","-",""],
     "tariff": 0,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "feet"
   },
@@ -35,7 +35,7 @@
     "category": "Twist",
     "figNotation": ["0","1",""],
     "tariff": 0.1,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "feet"
   },
@@ -45,7 +45,7 @@
     "category": "Twist",
     "figNotation": ["0","2",""],
     "tariff": 0.2,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "feet"
   },
@@ -55,7 +55,7 @@
     "category": "Seat",
     "figNotation": ["0","-",""],
     "tariff": 0,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "seat"
   },
@@ -65,7 +65,7 @@
     "category": "Seat",
     "figNotation": ["0","1",""],
     "tariff": 0.1,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "seat"
   },
@@ -75,7 +75,7 @@
     "category": "Seat",
     "figNotation": ["0","1",""],
     "tariff": 0.1,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "seat",
     "endPosition": "seat"
   },
@@ -85,7 +85,7 @@
     "category": "Seat",
     "figNotation": ["0","-",""],
     "tariff": 0,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "seat",
     "endPosition": "feet"
   },
@@ -95,7 +95,7 @@
     "category": "Seat",
     "figNotation": ["0","1",""],
     "tariff": 0.1,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "seat",
     "endPosition": "feet"
   },
@@ -105,7 +105,7 @@
     "category": "Seat",
     "figNotation": ["0","2",""],
     "tariff": 0.2,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "seat",
     "endPosition": "seat"
   },
@@ -115,7 +115,7 @@
     "category": "Seat",
     "figNotation": ["0","2",""],
     "tariff": 0.2,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "seat",
     "endPosition": "seat"
   },
@@ -125,7 +125,7 @@
     "category": "Front",
     "figNotation": ["1","-",""],
     "tariff": 0.1,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "front"
   },
@@ -135,7 +135,7 @@
     "category": "Front",
     "figNotation": ["1","1",""],
     "tariff": 0.2,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "front"
   },
@@ -145,7 +145,7 @@
     "category": "Front",
     "figNotation": ["2","1",""],
     "tariff": 0.2,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "front"
   },
@@ -155,7 +155,7 @@
     "category": "Front",
     "figNotation": ["1","-",""],
     "tariff": 0.1,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "front",
     "endPosition": "feet"
   },
@@ -165,7 +165,7 @@
     "category": "Front",
     "figNotation": ["1","1",""],
     "tariff": 0.2,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "front",
     "endPosition": "feet"
   },
@@ -175,7 +175,7 @@
     "category": "Front",
     "figNotation": ["1","2",""],
     "tariff": 0.3,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "front",
     "endPosition": "feet"
   },
@@ -185,7 +185,7 @@
     "category": "Front",
     "figNotation": ["0","2",""],
     "tariff": 0.2,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "front",
     "endPosition": "front"
   },
@@ -195,7 +195,7 @@
     "category": "Front",
     "figNotation": ["2","1","/"],
     "tariff": 0.3,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "front",
     "endPosition": "front"
   },
@@ -205,7 +205,7 @@
     "category": "Front",
     "figNotation": ["","",""],
     "tariff": 0,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "front",
     "endPosition": "front"
   },
@@ -215,7 +215,7 @@
     "category": "Back",
     "figNotation": ["1","-",""],
     "tariff": 0.1,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "back"
   },
@@ -225,7 +225,7 @@
     "category": "Back",
     "figNotation": ["1","1",""],
     "tariff": 0.2,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "back"
   },
@@ -235,7 +235,7 @@
     "category": "Back",
     "figNotation": ["2","1",""],
     "tariff": 0.2,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "back"
   },
@@ -245,7 +245,7 @@
     "category": "Back",
     "figNotation": ["1","-",""],
     "tariff": 0.1,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "back",
     "endPosition": "feet"
   },
@@ -255,7 +255,7 @@
     "category": "Back",
     "figNotation": ["1","1",""],
     "tariff": 0.2,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "back",
     "endPosition": "feet"
   },
@@ -265,7 +265,7 @@
     "category": "Back",
     "figNotation": ["1","2",""],
     "tariff": 0.3,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "back",
     "endPosition": "feet"
   },
@@ -275,7 +275,7 @@
     "category": "Back",
     "figNotation": ["0","2",""],
     "tariff": 0.2,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "back",
     "endPosition": "back"
   },
@@ -285,7 +285,7 @@
     "category": "Back",
     "figNotation": ["2","1",""],
     "tariff": 0.3,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "back",
     "endPosition": "back"
   },
@@ -295,7 +295,7 @@
     "category": "Back",
     "figNotation": ["2","3",""],
     "tariff": 0.5,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "back",
     "endPosition": "back"
   },
@@ -305,7 +305,7 @@
     "category": "Back",
     "figNotation": ["","",""],
     "tariff": 0,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "back",
     "endPosition": "back"
   },
@@ -335,7 +335,7 @@
     "category": "Front Somersault",
     "figNotation": ["3","-","o"],
     "tariff": 0.3,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "back"
   },
@@ -345,7 +345,7 @@
     "category": "Front Somersault",
     "figNotation": ["3","1",""],
     "tariff": 0.4,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "Bacj"
   },
@@ -355,7 +355,7 @@
     "category": "Front Somersault",
     "figNotation": ["4","-","o"],
     "tariff": 0.5,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "back",
     "endPosition": "back"
   },
@@ -375,7 +375,7 @@
     "category": "Back Somersault",
     "figNotation": ["3","-",""],
     "tariff": 0.3,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "back",
     "endPosition": "feet"
   },
@@ -405,7 +405,7 @@
     "category": "Back Somersault",
     "figNotation": ["3","-","o"],
     "tariff": 0.3,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "front"
   },
@@ -425,7 +425,7 @@
     "category": "Ball Outs",
     "figNotation": ["5","-","o"],
     "tariff": 0.6,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "back",
     "endPosition": "back"
   },
@@ -435,7 +435,7 @@
     "category": "Ball Outs",
     "figNotation": ["5","1","o"],
     "tariff": 0.7,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "back",
     "endPosition": "feet"
   },
@@ -445,7 +445,7 @@
     "category": "Ball Outs",
     "figNotation": ["5","1 -",""],
     "tariff": 0.7,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "back",
     "endPosition": "feet"
   },
@@ -455,7 +455,7 @@
     "category": "Ball Outs",
     "figNotation": ["5","3","/"],
     "tariff": 0.9,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "back",
     "endPosition": "feet"
   },
@@ -465,7 +465,7 @@
     "category": "Ball Outs",
     "figNotation": ["5","5","/"],
     "tariff": 1.1,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "back",
     "endPosition": "feet"
   },
@@ -475,7 +475,7 @@
     "category": "Ball Outs",
     "figNotation": ["5","7","/"],
     "tariff": 1.3,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "back",
     "endPosition": "feet"
   },
@@ -495,7 +495,7 @@
     "category": "Twisting Single Somersault",
     "figNotation": ["4","3","/"],
     "tariff": 0.8,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "feet"
   },
@@ -505,7 +505,7 @@
     "category": "Twisting Single Somersault",
     "figNotation": ["4","5","/"],
     "tariff": 1,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "feet"
   },
@@ -515,7 +515,7 @@
     "category": "Twisting Single Somersault",
     "figNotation": ["4","7","/"],
     "tariff": 1.2,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "feet"
   },
@@ -535,7 +535,7 @@
     "category": "Twisting Single Somersault",
     "figNotation": ["4","2","/"],
     "tariff": 0.7,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "feet"
   },
@@ -545,7 +545,7 @@
     "category": "Twisting Single Somersault",
     "figNotation": ["4","4","/"],
     "tariff": 0.9,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "feet"
   },
@@ -755,7 +755,7 @@
     "category": "Tripples +",
     "figNotation": ["12","- - 1","<"],
     "tariff": 1.8,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "feet"
   },
@@ -815,7 +815,7 @@
     "category": "Front Somersault",
     "figNotation": ["","",""],
     "tariff": 0,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "seat",
     "endPosition": "seat"
   },
@@ -835,7 +835,7 @@
     "category": "Twisting Single Somersault",
     "figNotation": ["4","2","/"],
     "tariff": 0.7,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "feet"
   },
@@ -845,7 +845,7 @@
     "category": "Twisting Single Somersault",
     "figNotation": ["4","1","/"],
     "tariff": 0.6,
-    "shapeBonus": 0,
+    "shapeBonus": null,
     "startPosition": "feet",
     "endPosition": "feet"
   }
